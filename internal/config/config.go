@@ -4,11 +4,13 @@ import (
 	"fmt"
 
 	"github.com/Zerferrous/Task-Manager-API/internal/logger"
+	"github.com/Zerferrous/Task-Manager-API/internal/transport/http/server"
 	"github.com/kelseyhightower/envconfig"
 )
 
 type Config struct {
-	Logger logger.Config
+	HTTPServer server.Config
+	Logger     logger.Config
 }
 
 func LoadConfig() (*Config, error) {
